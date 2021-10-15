@@ -1,0 +1,96 @@
+
+<?php include('1.-Header.php'); ?>
+<body>
+	
+	<!-- Barra de Informacion -->
+	<div class="full-width navBar">
+		<div class="full-width navBar-options">
+			<i class="zmdi zmdi-more-vert btn-menu" id="btn-menu"></i>	
+			<div class="mdl-tooltip" for="btn-menu">Menu</div>
+			<nav class="navBar-options-list">
+				<ul class="list-unstyle">
+					<li class="text-condensedLight noLink" ><small>Bienvenido : <?php echo $_SESSION['nombre'];  ?></small></li>
+					<li class="text-condensedLight noLink" ><small>Cargo : <?php echo $_SESSION['cargo'];  ?></small></li>
+					<li class="btn-exit" id="btn-exit">
+						<i class="zmdi zmdi-power"></i>
+						<div class="mdl-tooltip" for="btn-exit">Salir</div>
+					</li>
+					<li class="noLink">
+						<figure>
+							<img src="/1.-Herramientas/1.-Imagenes/logoesquina.png" alt="Avatar" class="img-responsive">
+						</figure>
+
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+		<!-- #Barra de Informacion -->
+	<!-- navLateral -->
+	<section class="full-width navLateral">
+		<div class="full-width navLateral-bg btn-menu"></div>
+
+		<!-- <div class="full-width navLateral-body btn-hola" id="btn-exit"">-->
+		<div class="full-width navLateral-body " id="btn-exit"">
+			<div class="full-width navLateral-body-logo text-center tittles a ">
+				Planeamiento y Control
+			</div>
+			<figure class="full-width" style="height: 77px;">
+				<div class="navLateral-body-cl">
+					<img src="/1.-Herramientas/1.-Imagenes/ima.jpg" alt="Avatar" style="width: 270px; height: 70px;" class="img-responsive">  
+				</div>
+				
+			</figure>
+			
+			<nav class="full-width">
+				<ul class="full-width list-unstyle menu-principal">
+					<li class="full-width">
+						<a href="#"  class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-view-dashboard c"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet b" >
+								<strong>JEFATURAS</strong>
+
+							</div>
+						</a>
+					</li>
+					
+					<!-- MENU -->
+					<?php foreach ($_SESSION["menu"] as $key) {?>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="<?php echo $key["url"];  ?>" data-toggle="tooltip" title="<?php echo $key["frase"];?>" class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="<?php echo $key["icono"];?>"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								<strong><?php echo $key["nombre"];  ?></strong>
+							</div>
+						</a>
+						
+					</li>
+					<?php 		
+					} ?>
+		
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Pagina de Contenido -->
+	<section class="full-width pageContent">
+		<section class="full-width text-center" style="padding: 40px 0;">
+			<h3 class="text-center tittles"> </h3>
+			<div class="slider-holder">
+		        <span id="slider-image-1"></span>
+
+		        <div class="image-holder">
+		            <img src="/1.-Herramientas/1.-Imagenes/comdatagroup.jpg" class="slider-image"/> 
+        		</div>
+
+   			</div>
+		</section>
+	</section>
+</body>
+</html>

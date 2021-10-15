@@ -1,0 +1,46 @@
+.sticky-table {
+
+	max-width: 100%;
+	max-height: 67vh;
+	overflow: auto;
+	border-top: 1px solid white;
+	border-bottom: 1px solid #ddd;
+	padding: 0 !important;
+	}
+
+.sticky-table table {
+	margin-bottom: 0;
+	width: 100%;
+	max-width: 100%;
+	border-spacing: 0;
+	padding: 0 !important;
+	border-collapse: collapse;
+	}
+
+.sticky-table table tr.sticky-row th,
+.sticky-table table tr.sticky-row td {
+	background-color: #2f75b5;
+	border-top: 0;
+	position: relative;
+	outline: 1px solid white;
+	z-index: 5;
+	color: white;
+	}
+
+
+
+.sticky-table table td.sticky-cell,
+.sticky-table table th.sticky-cell {
+	background-color: #ddebf7	;
+	outline: 1px solid write;
+	position: relative;
+	z-index: 10;
+	}
+
+.sticky-table table tr.sticky-row td.sticky-cell,
+.sticky-table table tr.sticky-row th.sticky-cell {
+	z-index: 15;
+	}
+
+
+}

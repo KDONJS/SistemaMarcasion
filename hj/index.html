@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Color Admin | Chart JS</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <link href="../../../assets/css/transparent/app.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="page-cover"></div>
+
+
+    <div id="page-loader" class="fade show">
+        <span class="spinner"></span>
+    </div>
+
+
+    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+
+        <div id="header" class="header navbar-default">
+
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand"><span class="navbar-logo"></span> <b>Color</b> Admin</a>
+                <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+            </div>
+
+            <ul class="navbar-nav navbar-right">
+                <li class="navbar-form">
+                    <form action="" method="POST" name="search_form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter keyword" />
+                            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle f-s-14">
+                        <i class="fa fa-bell"></i>
+                        <span class="label">5</span>
+                    </a>
+                    <div class="dropdown-menu media-list dropdown-menu-right">
+                        <div class="dropdown-header">NOTIFICATIONS (5)</div>
+                        <a href="javascript:;" class="dropdown-item media">
+                            <div class="media-left">
+                                <i class="fa fa-bug media-object bg-silver-darker"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading">Server Error Reports <i class="fa fa-exclamation-circle text-danger"></i></h6>
+                                <div class="text-muted f-s-11">3 minutes ago</div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="dropdown-item media">
+                            <div class="media-left">
+                                <img src="../assets/img/user/user-1.jpg" class="media-object" alt="" />
+                                <i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading">John Smith</h6>
+                                <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+                                <div class="text-muted f-s-11">25 minutes ago</div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="dropdown-item media">
+                            <div class="media-left">
+                                <img src="../assets/img/user/user-2.jpg" class="media-object" alt="" />
+                                <i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading">Olivia</h6>
+                                <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+                                <div class="text-muted f-s-11">35 minutes ago</div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="dropdown-item media">
+                            <div class="media-left">
+                                <i class="fa fa-plus media-object bg-silver-darker"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading"> New User Registered</h6>
+                                <div class="text-muted f-s-11">1 hour ago</div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="dropdown-item media">
+                            <div class="media-left">
+                                <i class="fa fa-envelope media-object bg-silver-darker"></i>
+                                <i class="fab fa-google text-warning media-object-icon f-s-14"></i>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading"> New Email From John</h6>
+                                <div class="text-muted f-s-11">2 hour ago</div>
+                            </div>
+                        </a>
+                        <div class="dropdown-footer text-center">
+                            <a href="javascript:;">View more</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown navbar-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="../assets/img/user/user-13.jpg" alt="" />
+                        <span class="d-none d-md-inline">Adam Schwartz</span> <b class="caret"></b>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="javascript:;" class="dropdown-item">Edit Profile</a>
+                        <a href="javascript:;" class="dropdown-item"><span class="badge badge-danger pull-right">2</span> Inbox</a>
+                        <a href="javascript:;" class="dropdown-item">Calendar</a>
+                        <a href="javascript:;" class="dropdown-item">Setting</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="javascript:;" class="dropdown-item">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div id="sidebar" class="sidebar">
+
+            <div data-scrollbar="true" data-height="100%">
+
+                <ul class="nav">
+                    <li class="nav-profile">
+                        <a href="javascript:;" data-toggle="nav-profile">
+                            <div class="cover with-shadow"></div>
+                            <div class="image">
+                                <img src="../assets/img/user/user-13.jpg" alt="" />
+                            </div>
+                            <div class="info">
+                                <b class="caret pull-right"></b>Sean Ngu
+                                <small>Front end developer</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <ul class="nav nav-profile">
+                            <li><a href="javascript:;"><i class="fa fa-cog"></i> Settings</a></li>
+                            <li><a href="javascript:;"><i class="fa fa-pencil-alt"></i> Send Feedback</a></li>
+                            <li><a href="javascript:;"><i class="fa fa-question-circle"></i> Helps</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <ul class="nav">
+                    <li class="nav-header">Navigation</li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-th-large"></i>
+                            <span>Dashboard</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">Dashboard v1</a></li>
+                            <li><a href="index_v2.html">Dashboard v2</a></li>
+                            <li><a href="index_v3.html">Dashboard v3</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <span class="badge pull-right">10</span>
+                            <i class="fa fa-hdd"></i>
+                            <span>Email</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="email_inbox.html">Inbox</a></li>
+                            <li><a href="email_compose.html">Compose</a></li>
+                            <li><a href="email_detail.html">Detail</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="widget.html">
+                            <i class="fab fa-simplybuilt"></i>
+                            <span>Widgets <span class="label label-theme">NEW</span></span>
+                        </a>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-gem"></i>
+                            <span>UI Elements <span class="label label-theme">NEW</span></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="ui_general.html">General <i class="fa fa-paper-plane text-theme"></i></a></li>
+                            <li><a href="ui_typography.html">Typography</a></li>
+                            <li><a href="ui_tabs_accordions.html">Tabs & Accordions</a></li>
+                            <li><a href="ui_unlimited_tabs.html">Unlimited Nav Tabs</a></li>
+                            <li><a href="ui_modal_notification.html">Modal & Notification <i class="fa fa-paper-plane text-theme"></i></a></li>
+                            <li><a href="ui_widget_boxes.html">Widget Boxes</a></li>
+                            <li><a href="ui_media_object.html">Media Object</a></li>
+                            <li><a href="ui_buttons.html">Buttons <i class="fa fa-paper-plane text-theme"></i></a></li>
+                            <li><a href="ui_icons.html">Icons</a></li>
+                            <li><a href="ui_simple_line_icons.html">Simple Line Icons</a></li>
+                            <li><a href="ui_ionicons.html">Ionicons</a></li>
+                            <li><a href="ui_tree.html">Tree View</a></li>
+                            <li><a href="ui_language_bar_icon.html">Language Bar & Icon</a></li>
+                            <li><a href="ui_social_buttons.html">Social Buttons</a></li>
+                            <li><a href="ui_tour.html">Intro JS</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="bootstrap_4.html">
+                            <div class="icon-img">
+                                <img src="../assets/img/logo/logo-bs4.png" alt="" />
+                            </div>
+                            <span>Bootstrap 4 <span class="label label-theme">NEW</span></span>
+                        </a>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-list-ol"></i>
+                            <span>Form Stuff <span class="label label-theme">NEW</span></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="form_elements.html">Form Elements <i class="fa fa-paper-plane text-theme"></i></a></li>
+                            <li><a href="form_plugins.html">Form Plugins <i class="fa fa-paper-plane text-theme"></i></a></li>
+                            <li><a href="form_slider_switcher.html">Form Slider + Switcher</a></li>
+                            <li><a href="form_validation.html">Form Validation</a></li>
+                            <li><a href="form_wizards.html">Wizards <i class="fa fa-paper-plane text-theme"></i></a></li>
+                            <li><a href="form_wysiwyg.html">WYSIWYG</a></li>
+                            <li><a href="form_editable.html">X-Editable</a></li>
+                            <li><a href="form_multiple_upload.html">Multiple File Upload</a></li>
+                            <li><a href="form_summernote.html">Summernote</a></li>
+                            <li><a href="form_dropzone.html">Dropzone</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-table"></i>
+                            <span>Tables</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="table_basic.html">Basic Tables</a></li>
+                            <li class="has-sub">
+                                <a href="javascript:;"><b class="caret"></b> Managed Tables</a>
+                                <ul class="sub-menu">
+                                    <li><a href="table_manage.html">Default</a></li>
+                                    <li><a href="table_manage_autofill.html">Autofill</a></li>
+                                    <li><a href="table_manage_buttons.html">Buttons</a></li>
+                                    <li><a href="table_manage_colreorder.html">ColReorder</a></li>
+                                    <li><a href="table_manage_fixed_columns.html">Fixed Column</a></li>
+                                    <li><a href="table_manage_fixed_header.html">Fixed Header</a></li>
+                                    <li><a href="table_manage_keytable.html">KeyTable</a></li>
+                                    <li><a href="table_manage_responsive.html">Responsive</a></li>
+                                    <li><a href="table_manage_rowreorder.html">RowReorder</a></li>
+                                    <li><a href="table_manage_scroller.html">Scroller</a></li>
+                                    <li><a href="table_manage_select.html">Select</a></li>
+                                    <li><a href="table_manage_combine.html">Extension Combination</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-cash-register"></i>
+                            <span>POS System <span class="label label-theme">NEW</span></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="pos_customer_order.html" target="_blank">Customer Order</a></li>
+                            <li><a href="pos_kitchen_order.html" target="_blank">Kitchen Order</a></li>
+                            <li><a href="pos_counter_checkout.html" target="_blank">Counter Checkout</a></li>
+                            <li><a href="pos_table_booking.html" target="_blank">Table Booking</a></li>
+                            <li><a href="pos_menu_stock.html" target="_blank">Menu Stock</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-star"></i>
+                            <span>Front End</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="../../frontend/one-page-parallax/index.html" target="_blank">One Page Parallax</a></li>
+                            <li><a href="../../frontend/blog/index.html" target="_blank">Blog</a></li>
+                            <li><a href="../../frontend/forum/index.html" target="_blank">Forum</a></li>
+                            <li><a href="../../frontend/e-commerce/index.html" target="_blank">E-Commerce</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-envelope"></i>
+                            <span>Email Template</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="email_system.html">System Template</a></li>
+                            <li><a href="email_newsletter.html">Newsletter Template</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub active">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-chart-pie"></i>
+                            <span>Chart <span class="label label-theme">NEW</span></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="chart-flot.html">Flot Chart</a></li>
+                            <li class="active"><a href="chart-js.html">Chart JS</a></li>
+                            <li><a href="chart-d3.html">d3 Chart</a></li>
+                            <li><a href="chart-apex.html">Apex Chart <i class="fa fa-paper-plane text-theme"></i></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="calendar.html">
+                            <i class="fa fa-calendar"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-map"></i>
+                            <span>Map</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="map_vector.html">Vector Map</a></li>
+                            <li><a href="map_google.html">Google Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-image"></i>
+                            <span>Gallery</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="gallery.html">Gallery v1</a></li>
+                            <li><a href="gallery_v2.html">Gallery v2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-cogs"></i>
+                            <span>Page Options <span class="label label-theme">NEW</span></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="page_blank.html">Blank Page</a></li>
+                            <li><a href="page_with_footer.html">Page with Footer</a></li>
+                            <li><a href="page_without_sidebar.html">Page without Sidebar</a></li>
+                            <li><a href="page_with_right_sidebar.html">Page with Right Sidebar</a></li>
+                            <li><a href="page_with_minified_sidebar.html">Page with Minified Sidebar</a></li>
+                            <li><a href="page_with_two_sidebar.html">Page with Two Sidebar</a></li>
+                            <li><a href="page_with_line_icons.html">Page with Line Icons</a></li>
+                            <li><a href="page_with_ionicons.html">Page with Ionicons</a></li>
+                            <li><a href="page_full_height.html">Full Height Content</a></li>
+                            <li><a href="page_with_wide_sidebar.html">Page with Wide Sidebar</a></li>
+                            <li><a href="page_with_mega_menu.html">Page with Mega Menu</a></li>
+                            <li><a href="page_with_top_menu.html">Page with Top Menu</a></li>
+                            <li><a href="page_with_boxed_layout.html">Page with Boxed Layout</a></li>
+                            <li><a href="page_with_mixed_menu.html">Page with Mixed Menu</a></li>
+                            <li><a href="page_boxed_layout_with_mixed_menu.html">Boxed Layout with Mixed Menu</a></li>
+                            <li><a href="page_with_search_sidebar.html">Page with Search Sidebar <i class="fa fa-paper-plane text-theme"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-gift"></i>
+                            <span>Extra <span class="label label-theme">NEW</span></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="extra_timeline.html">Timeline</a></li>
+                            <li><a href="extra_coming_soon.html">Coming Soon Page</a></li>
+                            <li><a href="extra_search_results.html">Search Results</a></li>
+                            <li><a href="extra_invoice.html">Invoice</a></li>
+                            <li><a href="extra_404_error.html">404 Error Page</a></li>
+                            <li><a href="extra_profile.html">Profile Page</a></li>
+                            <li><a href="extra_scrum_board.html">Scrum Board <i class="fa fa-paper-plane text-theme"></i></a></li>
+                            <li><a href="extra_cookie_acceptance_banner.html">Cookie Acceptance Banner <i class="fa fa-paper-plane text-theme"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-key"></i>
+                            <span>Login & Register</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="login_v2.html">Login v2</a></li>
+                            <li><a href="login_v3.html">Login v3</a></li>
+                            <li><a href="register_v3.html">Register v3</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-cubes"></i>
+                            <span>Version <span class="label label-theme">NEW</span></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="../html/index_v3.html">HTML</a></li>
+                            <li><a href="../ajax/">AJAX</a></li>
+                            <li><a href="../angularjs/">ANGULAR JS</a></li>
+                            <li><a href="../angularjs10/">ANGULAR JS 10</a></li>
+                            <li><a href="javascript:alert('Laravel Version only available in downloaded version.');">LARAVEL</a></li>
+                            <li><a href="../vuejs/">VUE JS</a></li>
+                            <li><a href="../reactjs/">REACT JS</a></li>
+                            <li><a href="javascript:alert('.NET Core 3.1 MVC Version only available in downloaded version.');">ASP.NET <i class="fa fa-paper-plane text-theme"></i></a></li>
+                            <li><a href="../material/index_v3.html">MATERIAL DESIGN</a></li>
+                            <li><a href="../apple/index_v3.html">APPLE DESIGN</a></li>
+                            <li><a href="../transparent/index_v3.html">TRANSPARENT DESIGN <i class="fa fa-paper-plane text-theme"></i></a></li>
+                            <li><a href="../facebook/index_v3.html">FACEBOOK DESIGN <i class="fa fa-paper-plane text-theme"></i></a></li>
+                            <li><a href="../google/index_v3.html">GOOGLE DESIGN <i class="fa fa-paper-plane text-theme"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-medkit"></i>
+                            <span>Helper</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="helper_css.html">Predefined CSS Classes</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-align-left"></i>
+                            <span>Menu Level</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="has-sub">
+                                <a href="javascript:;">
+                                    <b class="caret"></b> Menu 1.1
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="has-sub">
+                                        <a href="javascript:;">
+                                            <b class="caret"></b> Menu 2.1
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="javascript:;">Menu 3.1</a></li>
+                                            <li><a href="javascript:;">Menu 3.2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">Menu 2.2</a></li>
+                                    <li><a href="javascript:;">Menu 2.3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:;">Menu 1.2</a></li>
+                            <li><a href="javascript:;">Menu 1.3</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="sidebar-bg"></div>
+
+
+        <div id="content" class="content">
+
+            <ol class="breadcrumb float-xl-right">
+                <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+                <li class="breadcrumb-item"><a href="javascript:;">Chart</a></li>
+                <li class="breadcrumb-item active">Chart JS</li>
+            </ol>
+
+
+            <h1 class="page-header">Chart JS <small>header small text goes here...</small></h1>
+
+            <div class="row">
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="widget widget-stats bg-blue">
+                        <div class="stats-icon"><i class="fa fa-desktop"></i></div>
+                        <div class="stats-info">
+                            <h4>CASOS ATENDIDOS</h4>
+                            <p id="casosAtendidos">300</p>
+                        </div>
+                        <div class="stats-link">
+                            <a href="javascript:;"> Ver detalle <i class="fa fa-arrow-alt-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="widget widget-stats bg-info">
+                        <div class="stats-icon"><i class="fa fa-link"></i></div>
+                        <div class="stats-info">
+                            <h4>AHT GENERAL</h4>
+                            <p>500 Seg</p>
+                        </div>
+                        <div class="stats-link">
+                            <a href="javascript:;">Ver detalle <i class="fa fa-arrow-alt-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="widget widget-stats bg-orange">
+                        <div class="stats-icon"><i class="fa fa-users"></i></div>
+                        <div class="stats-info">
+                            <h4>AGENTES CONECTADOS</h4>
+                            <p>500</p>
+                        </div>
+                        <div class="stats-link">
+                            <a href="javascript:;">Ver detalle <i class="fa fa-arrow-alt-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="widget widget-stats bg-red">
+                        <div class="stats-icon"><i class="fa fa-clock"></i></div>
+                        <div class="stats-info">
+                            <h4> NPS GENERAL</h4>
+                            <p>80 %</p>
+                        </div>
+                        <div class="stats-link">
+                            <a href="javascript:;"> Ver detalle <i class="fa fa-arrow-alt-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+
+                <div class="col-xl-6">
+
+                    <div class="panel panel-inverse" data-sortable-id="chart-js-1">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Line Chart</h4>
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                A line chart is a way of plotting data points on a line. Often, it is used to show trend data, and the comparison of two data sets.
+                            </p>
+                            <div>
+                                <canvas id="line-chart" data-render="chart-js"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-xl-6">
+
+                    <div class="panel panel-inverse" data-sortable-id="chart-js-2">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Bar Chart</h4>
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                A bar chart is a way of showing data as bars. It is sometimes used to show trend data, and the comparison of multiple data sets side by side.
+                            </p>
+                            <div>
+                                <canvas id="bar-chart" data-render="chart-js"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <section>
+                <div>
+
+                    <style>
+                        .ft_container table {
+                            border-width: 0px;
+                            margin: 0px;
+                            border-collapse: collapse;
+                            margin: 0;
+                            outline-style: none;
+                            font-size: 0.9em;
+                            background: rgba(44, 46, 47, 0.253);
+                        }
+                        
+                        .ft_container table tr th {
+                            font-weight: bold;
+                        }
+                        
+                        .ft_container table thead {
+                            -moz-user-select: none;
+                            -webkit-user-select: none;
+                        }
+                        
+                        .ft_container table tr th,
+                        .ft_container table tr td {
+                            border-collapse: collapse;
+                            padding: 0px 0px;
+                            word-wrap: break-word;
+                            border: rgba(54, 54, 54, 0.2);
+                            border-top-width: 0px;
+                            border-left-width: 0px;
+                            border-right-width: 0px;
+                            border-bottom-width: 0px;
+                            overflow: hidden;
+                            word-wrap: break-word;
+                        }
+                        
+                        .ft_container table tr:first-child td,
+                        .ft_container table tr:first-child th {
+                            border-top-width: 10px;
+                            border-color: rgba(54, 54, 54, 0.2);
+                        }
+                        
+                        .ft_container table tr td:first-child,
+                        .ft_container table tr th:first-child {
+                            border-left-width: 3px;
+                            border-color: rgba(54, 54, 54, 0.2);
+                        }
+                        
+                        .ft_container {
+                            overflow: auto;
+                            padding: 0px;
+                        }
+                        
+                        .ft_rel_container {
+                            position: relative;
+                            overflow: hidden;
+                            border-width: 0px;
+                            width: 100%;
+                            height: 100%;
+                            border-color: 1px solid rgba(54, 54, 54, 0.2);
+                        }
+                        
+                        .ft_r,
+                        .ft_rc {
+                            background-image: none;
+                        }
+                        
+                        .ft_rc {
+                            position: absolute;
+                            z-index: 1005;
+                        }
+                        
+                        .ft_r,
+                        .ft_c {
+                            position: relative;
+                        }
+                        
+                        .ft_rwrapper,
+                        .ft_cwrapper {
+                            overflow: hidden;
+                            position: absolute;
+                            z-index: 1001;
+                            border-width: 0px;
+                            padding: 0px;
+                            margin: 0px;
+                        }
+                        /*.ft_rwrapper { width: 100%; padding-right: 17px; }*/
+                        
+                        .ft_scroller {
+                            overflow: auto;
+                            background-color: none;
+                            height: 100%;
+                            padding: 0px;
+                            margin: 0px;
+                        }
+                        
+                        .ft_container tbody tr.ui-widget-content,
+                        thead.ui-widget-header {
+                            background-image: none;
+                        }
+                        
+                        .ft_container table.sorttable thead tr th {
+                            cursor: pointer;
+                        }
+                        
+                        .ft_container table thead tr th.fx_sort_bg {
+                            background-image: url(images/bg.gif);
+                            background-position: right center;
+                            background-repeat: no-repeat;
+                        }
+                        
+                        .ft_container table thead tr th.fx_sort_asc {
+                            background-image: url(images/asc.gif);
+                        }
+                        
+                        .ft_container table thead tr th.fx_sort_desc {
+                            background-image: url(images/desc.gif);
+                        }
+                        
+                        table.dataTable tbody th,
+                        table.dataTable tbody td {}
+                        
+                        .dataTables_scroll {
+                            width: auto !important;
+                        }
+                    </style>
+
+                    <style>
+                        html,
+                        body {
+                            font-family: 'Poppins', sans-serif;
+                            font-size: 13px;
+                            margin: 0;
+                            padding: 0;
+                            background-color: rgba(255, 255, 255, 0);
+                        }
+                        
+                        div.container {
+                            padding: 5px 15px;
+                            width: 1330px;
+                            margin: 10px auto;
+                        }
+                    </style>
+
+                    </select>
+
+                    <?php
+
+
+
+	//Crear la conexión
+	$srv="DESKTOP-9FG6RED\SQLEXPRESS";
+	$opc=array("Database"=>"PortalCDG", "UID"=>"PortalCDG", "PWD"=>"password","CharacterSet" => "UTF-8");
+	$con=sqlsrv_connect($srv,$opc) or die(print_r(sqlsrv_errors(), true));
+
+
+  $dni = $_SESSION['usuario'];
+
+  $sql="SELECT * 
+        FROM    z_03_99_Resumen_Diario_2  
+        where   fecha = '2021-03-20' 
+        order by fecha
+  ; ";
+  $res=sqlsrv_query($con,$sql);
+
+  $icon_green = '<svg width="15" height="15" viewBox="0 0 24 24" style="fill: green;"><path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z"></path></svg>';
+  $icon_orannge = '<svg width="15" height="15" viewBox="0 0 24 24" style="fill: orange;"><path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z"></path></svg>';
+  $icon_red = '<svg width="15" height="15" viewBox="0 0 24 24" style="fill: red;"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"></path></svg>';
+
+?>
+
+                        <section>
+                            <div>
+                                <script>
+                                </script>
+                                <br>
+
+                                <head>
+                                    <meta charset="utf-8">
+                                    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+                                    <title>angular date</title>
+
+                                </head>
+
+                                <p> <br> TABLA DE INDICADORES </p>
+
+                                <a class="btn btn-success nav-header " id="btn-ok">
+                                    <i class="fa fa-arrow-circle-left "></i> Cargar datos
+                                </a>
+</body>
+
+</html>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body" style="text-align: center;">
+                <table class="  nowrap hover  " id="tablaJson">
+                    <thead>
+                        <tr>
+                            <th style="color:#FF0000" ;>DNI</th>
+                            <th style="color:#FF0000" ;>AGENTE</th>
+                            <th>SUPERVISOR</th>
+                            <th>Atendidas</th>
+                            <th>Atendidas_30</th>
+                            <th>Abandonada</th>
+                            <th>Llamada_Salida</th>
+                            <th>AHT</th>
+                            <th>AHT_CHAT</th>
+                            <th>AHT_PHONE</th>
+                            <th>AHT_EMAIL</th>
+                            <th>AHT_MESSAGING</th>
+                            <th>Recontacto</th>
+                            <th>Paymentlink</th>
+                            <th>Revenue</th>
+                            <th>NPS</th>
+                            <th>CSAT</th>
+                            <th>FCR</th>
+                        </tr>
+                    </thead>
+                    <tbody id="body_tablaJson" style="color: black !important; ">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="theme-panel theme-panel-lg">
+    <a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"><i class="fa fa-cog"></i></a>
+    <div class="theme-panel-content">
+        <h5>App Settings</h5>
+        <ul class="theme-list clearfix">
+            <li><a href="javascript:;" class="bg-red" data-theme="red" data-theme-file="../assets/css/transparent/theme/red.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Red">&nbsp;</a></li>
+            <li><a href="javascript:;" class="bg-pink" data-theme="pink" data-theme-file="../assets/css/transparent/theme/pink.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Pink">&nbsp;</a></li>
+            <li><a href="javascript:;" class="bg-orange" data-theme="orange" data-theme-file="../assets/css/transparent/theme/orange.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Orange">&nbsp;</a></li>
+            <li><a href="javascript:;" class="bg-yellow" data-theme="yellow" data-theme-file="../assets/css/transparent/theme/yellow.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Yellow">&nbsp;</a></li>
+            <li><a href="javascript:;" class="bg-lime" data-theme="lime" data-theme-file="../assets/css/transparent/theme/lime.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Lime">&nbsp;</a></li>
+            <li><a href="javascript:;" class="bg-green" data-theme="green" data-theme-file="../assets/css/transparent/theme/green.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Green">&nbsp;</a></li>
+            <li><a href="javascript:;" class="bg-teal" data-theme="teal" data-theme-file="../assets/css/transparent/theme/teal.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Teal">&nbsp;</a></li>
+            <li><a href="javascript:;" class="bg-aqua" data-theme="aqua" data-theme-file="../assets/css/transparent/theme/aqua.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Aqua">&nbsp;</a></li>
+            <li class="active"><a href="javascript:;" class="bg-blue" data-theme="default" data-theme-file="" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Default">&nbsp;</a></li>
+            <li><a href="javascript:;" class="bg-purple" data-theme="purple" data-theme-file="../assets/css/transparent/theme/purple.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Purple">&nbsp;</a></li>
+            <li><a href="javascript:;" class="bg-indigo" data-theme="indigo" data-theme-file="../assets/css/transparent/theme/indigo.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Indigo">&nbsp;</a></li>
+            <li><a href="javascript:;" class="bg-black" data-theme="black" data-theme-file="../assets/css/transparent/theme/black.min.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Black">&nbsp;</a></li>
+        </ul>
+        <div class="divider"></div>
+        <div class="row m-t-10">
+            <div class="col-6 control-label  f-w-600">Header Fixed</div>
+            <div class="col-6 d-flex">
+                <div class="custom-control custom-switch ml-auto">
+                    <input type="checkbox" class="custom-control-input" name="header-fixed" id="headerFixed" value="1" checked />
+                    <label class="custom-control-label" for="headerFixed">&nbsp;</label>
+                </div>
+            </div>
+        </div>
+        <div class="row m-t-10">
+            <div class="col-6 control-label  f-w-600">Sidebar Fixed</div>
+            <div class="col-6 d-flex">
+                <div class="custom-control custom-switch ml-auto">
+                    <input type="checkbox" class="custom-control-input" name="sidebar-fixed" id="sidebarFixed" value="1" checked />
+                    <label class="custom-control-label" for="sidebarFixed">&nbsp;</label>
+                </div>
+            </div>
+        </div>
+        <div class="row m-t-10">
+            <div class="col-6 control-label  f-w-600">Sidebar Grid</div>
+            <div class="col-6 d-flex">
+                <div class="custom-control custom-switch ml-auto">
+                    <input type="checkbox" class="custom-control-input" name="sidebar-grid" id="sidebarGrid" value="1" />
+                    <label class="custom-control-label" for="sidebarGrid">&nbsp;</label>
+                </div>
+            </div>
+        </div>
+        <div class="row m-t-10">
+            <div class="col-md-6 control-label  f-w-600">Sidebar Gradient</div>
+            <div class="col-md-6 d-flex">
+                <div class="custom-control custom-switch ml-auto">
+                    <input type="checkbox" class="custom-control-input" name="sidebar-gradient" id="sidebarGradient" value="1" />
+                    <label class="custom-control-label" for="sidebarGradient">&nbsp;</label>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <h5>Admin Design (5)</h5>
+        <div class="theme-version">
+            <a href="../html/index_v2.html">
+                <span style="background-image: url(../assets/img/theme/default.jpg);"></span>
+            </a>
+            <a href="../transparent/index_v2.html" class="active">
+                <span style="background-image: url(../assets/img/theme/transparent.jpg);"></span>
+            </a>
+        </div>
+        <div class="theme-version">
+            <a href="../apple/index_v2.html">
+                <span style="background-image: url(../assets/img/theme/apple.jpg);"></span>
+            </a>
+            <a href="../material/index_v2.html">
+                <span style="background-image: url(../assets/img/theme/material.jpg);"></span>
+            </a>
+        </div>
+        <div class="theme-version">
+            <a href="../facebook/index_v2.html">
+                <span style="background-image: url(../assets/img/theme/facebook.jpg);"></span>
+            </a>
+            <a href="../google/index_v2.html">
+                <span style="background-image: url(../assets/img/theme/google.jpg);"></span>
+            </a>
+        </div>
+        <div class="divider"></div>
+        <h5>Language Version (7)</h5>
+        <div class="theme-version">
+            <a href="../../../html/" class="active">
+                <span style="background-image: url(../../../assets/img/version/html.jpg);"></span>
+            </a>
+            <a href="../../../ajax/">
+                <span style="background-image: url(../../../assets/img/version/ajax.jpg);"></span>
+            </a>
+        </div>
+        <div class="theme-version">
+            <a href="../../../angularjs/">
+                <span style="background-image: url(../../../assets/img/version/angular1x.jpg);"></span>
+            </a>
+            <a href="../../../angularjs10/">
+                <span style="background-image: url(../../../assets/img/version/angular10x.jpg);"></span>
+            </a>
+        </div>
+        <div class="theme-version">
+            <a href="javascript:alert('Laravel Version only available in downloaded version.');">
+                <span style="background-image: url(../../../assets/img/version/laravel.jpg);"></span>
+            </a>
+            <a href="../../../vuejs/">
+                <span style="background-image: url(../../../assets/img/version/vuejs.jpg);"></span>
+            </a>
+        </div>
+        <div class="theme-version">
+            <a href="../../../reactjs/">
+                <span style="background-image: url(../../../assets/img/version/reactjs.jpg);"></span>
+            </a>
+            <a href="javascript:alert('.NET Core 3.1 MVC Version only available in downloaded version.');">
+                <span style="background-image: url(../../../assets/img/version/dotnet.jpg);"></span>
+            </a>
+        </div>
+        <div class="divider"></div>
+        <h5>Frontend Design (4)</h5>
+        <div class="theme-version">
+            <a href="../../../../../../frontend/one-page-parallax/">
+                <span style="background-image: url(../../../assets/img/theme/one-page-parallax.jpg);"></span>
+            </a>
+            <a href="../../../../../../frontend/e-commerce/">
+                <span style="background-image: url(../../../assets/img/theme/e-commerce.jpg);"></span>
+            </a>
+        </div>
+        <div class="theme-version">
+            <a href="../../../../../../frontend/blog/">
+                <span style="background-image: url(../../../assets/img/theme/blog.jpg);"></span>
+            </a>
+            <a href="../../../../../../frontend/forum/">
+                <span style="background-image: url(../../../assets/img/theme/forum.jpg);"></span>
+            </a>
+        </div>
+        <div class="divider"></div>
+        <div class="row m-t-10">
+            <div class="col-md-12">
+                <a href="https://seantheme.com/color-admin/documentation/" class="btn btn-yellow btn-block btn-rounded" target="_blank"><b>Documentation</b></a>
+                <a href="javascript:;" class="btn btn-default btn-block btn-rounded" data-click="reset-local-storage"><b>Reset Local Storage</b></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+
+</div>
+
+
+<script src="../../../assets/js/app.min.js" type="40a8d7dc733a74ba108c79bb-text/javascript"></script>
+<script src="../../../assets/js/theme/transparent.min.js" type="40a8d7dc733a74ba108c79bb-text/javascript"></script>
+
+<script type="40a8d7dc733a74ba108c79bb-text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-53034621-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="../../../assets/plugins/chart.js/dist/Chart.min.js" type="40a8d7dc733a74ba108c79bb-text/javascript"></script>
+<script type="40a8d7dc733a74ba108c79bb-text/javascript">
+    COLOR_DARK = 'rgba(255,255,255,0.75)';
+</script>
+<script src="../../../assets/js/demo/chart-js.demo.js" type="40a8d7dc733a74ba108c79bb-text/javascript"></script>
+
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="40a8d7dc733a74ba108c79bb-|49" defer=""></script>
+</body>
+
+</html>
+
+<?php
+}else{
+	// echo '<script> window.location="../../../../../../../../../index.php"; </script>';
+}
+?>
+
+
+    <script>
+        $(document).on('ready', function() {
+
+            console.log('Entra Jquery');
+            var diasAtras = 9;
+            var d = new Date(Date.now() - (86400000 * diasAtras));
+            var month = d.getMonth() + 1;
+            var day = d.getDate();
+            var ayer = d.getFullYear() + '-' + (('' + month).length < 2 ? '0' : '') + month + '-' + (('' + day).length < 2 ? '0' : '') + day;
+
+            $('#dateInput').val(ayer);
+
+            // let datos = { 'fecha' : ayer }
+            // $.post( "tabla.php", datos)
+            //     .done(function( data ) 
+            //       {
+            //         $("#tableBody").html(data);
+            //       }
+            //     );
+            tablaExiste = 0;
+
+
+            function tablaJson(datos) {
+                //  $('#tablaJson').DataTable().fnDestroy();		 
+                tablaExiste = 1;
+                oTableJson = $('#tablaJson').DataTable({
+                    // fixedHeader:    true,
+                    // autoWidth: true,
+                    scrollY: 500,
+                    scrollX: true,
+                    scrollCollapse: true,
+                    // paging:         false,
+
+                    fixedColumns: {
+                        leftColumns: 2
+                    },
+                    // responsive: true,
+                    dom: '   rftp  <"clear"B> ',
+                    buttons: [{
+                        extend: 'collection',
+                        text: 'Exportar',
+                        buttons: [{
+                                extend: 'copyHtml5',
+                                exportOptions: {
+                                    columns: [0]
+                                }
+                            },
+                            'excel',
+                            'csv',
+                            'pdf',
+                            'print'
+                        ],
+
+                    }],
+                    'ajax': {
+                        'url': 'tablaJson.php',
+                        'data': datos,
+                        'type': 'post'
+                    },
+                    "columns": [{
+                        "data": "DNI"
+                    }, {
+                        "data": "AGENTE"
+                    }, {
+                        "data": "SUPERVISOR"
+                    }, {
+                        "data": "Atendidas"
+                    }, {
+                        "data": "Atendidas_30"
+                    }, {
+                        "data": "Abandonada"
+                    }, {
+                        "data": "Llamada_Salida"
+                    }, {
+                        "data": "AHT"
+                    }, {
+                        "data": "AHT_CHAT"
+                    }, {
+                        "data": "AHT_PHONE"
+                    }, {
+                        "data": "AHT_EMAIL"
+                    }, {
+                        "data": "AHT_MESSAGING"
+                    }, {
+                        "data": "Recontacto"
+                    }, {
+                        "data": "Paymentlink"
+                    }, {
+                        "data": "Revenue"
+                    }, {
+                        "data": "NPS"
+                    }, {
+                        "data": "CSAT"
+                    }, {
+                        "data": "FCR"
+                    }],
+                    "initComplete": function(settings, json) {
+                        /**Inicio - Funcion para Sumar Dentro de la tabla */
+                        $.fn.DataTable.Api.register('sum()', function() {
+                            var sum = 0;
+                            for (var i = 0, ien = this.length; i < ien; i++) {
+                                sum += parseInt(this[i]);
+                            }
+                            return sum;
+                        });
+                        /** Fin - Funcion para Sumar Dentro de la tabla */
+
+                        let totalAtendidas = oTableJson.column(3).data().sum();
+                        $('#casosAtendidos').html('');
+                        $('#casosAtendidos').html(totalAtendidas);
+
+                    }
+                });
+            }
+
+
+
+            $('#btn-ok').click(function() {
+                let fechaInput = $('#dateInput').val();
+                let fecha = fechaInput;
+                let datos = {
+                    'fecha': fecha
+                }
+
+                $.post("tabla.php", datos)
+                    .done(function(data) {
+                        // $("#tableBody").html('');
+                        $("#tableBody").html(data);
+                    });
+
+                // jQuery.noConflict();
+                // tablaJson(datos);
+
+                if (tablaExiste == 0) {
+                    jQuery.noConflict();
+                    console.log('Construiccion ');
+                    tablaJson(datos);
+                } else {
+                    jQuery.noConflict();
+                    console.log('destruir 1 ');
+                    oTableJson.destroy();
+                    console.log('destruir 2 ');
+                    tablaJson(datos);
+                }
+
+
+
+
+
+
+            });
+
+
+        });
+    </script>
